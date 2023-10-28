@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hierbana/screens/catalogo_screen.dart';
+//import 'package:flutter_hierbana/screens/mainn_screen.dart';
+import 'package:flutter_hierbana/screens/principal_screen.dart';
 
   
 
@@ -30,7 +31,7 @@ theme: ThemeData(
    ),
 debugShowCheckedModeBanner:false,
 
-home: const CatalogoScreen()
+home: const Principal()
 );
 
 }
