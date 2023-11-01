@@ -1,19 +1,13 @@
-import "package:flutter/material.dart";
+import 'package:flutter/material.dart';
 
 
-class MainScreen extends StatefulWidget {
-  const MainScreen({super.key});
+class DesignBasicScreen extends StatelessWidget{
 
-  @override
-  State<MainScreen> createState() => _MainScreenState();
-}
-int selectedBnavbarIndex=0;
-class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      appBar: AppBar(
-        
+    return Scaffold(
+       appBar: AppBar(
+        elevation: 0.0,
         leading: Builder(builder: (BuildContext context){
           return
            Image.asset(
@@ -34,34 +28,31 @@ class _MainScreenState extends State<MainScreen> {
                 ),
                 onPressed: () => print('hi on menu icon'),
               )],
-          
+           
       ),
-
-
-      body:Center(
-        
-        child: Column(
-        
-          
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: 
-          
-          const[
-            
-            ElevatedButton(onPressed: null,
-             child:  Text('Catalogo')),
-          ],
-        ),
-        
-        
+      body:Stack(
+        children: 
+        [
+          Image.asset("images/principal_mobile.png",
+          fit: BoxFit.cover,
+          width: double.infinity,
+          height: double.infinity,
+          ),
+        Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                onPressed: (){}, 
+                child: Text("Catalogo"),
+                ),
+            ],
+          ),
+        )
+       
+         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: selectedBnavbarIndex,
-        onTap: (value){
-          setState(() {
-            selectedBnavbarIndex = value;
-          });
-        },
         backgroundColor: Color(0xFF0B5345),
         items: [
           BottomNavigationBarItem(
@@ -76,7 +67,7 @@ class _MainScreenState extends State<MainScreen> {
             label: '',
             
             ),
-        ],
+        ]
       ),
     );
   }
