@@ -59,15 +59,29 @@ class _CatalogoScreenState extends State<CatalogoScreen> {
             Card(
       elevation: 20,
       color: Colors.grey[300],
+      
+      
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
+
+        
+       
+        
+        
         
         children: [
-          SizedBox(height: 20,),
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+          SizedBox(height: 80, width: 80,),
           Text(product?.title ??'' ),
-
+          Text(product?.price.toString()??''),
           if(product != null)
-          Image.network(product!.images.first), 
+          Image.network(product!.images[1],width: 80, height: 80,),],
+          )
+          
+          
+           
          
         ],
       ),
