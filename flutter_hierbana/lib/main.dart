@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hierbana/screens/design_basic.dart';
-//import 'package:flutter_hierbana/screens/mainn_screen.dart';
-//import 'package:flutter_hierbana/screens/principal_screen.dart';
+import 'package:flutter_hierbana/screens/catalogo_screen.dart';
+import 'package:flutter_hierbana/screens/home_screen.dart';
 
   
 
@@ -22,9 +21,10 @@ Widget build(BuildContext context) {
 
 return  MaterialApp(
 debugShowCheckedModeBanner:false,
-initialRoute: 'design_basic', // establecimiento de la ruta de inicio 
+initialRoute: '/homepage', // establecimiento de la ruta de inicio 
 routes:{ //establece las rutas de la aplicacion
-  'design_basic': (BuildContext context)=>DesignBasicScreen() 
+  '/homepage': (BuildContext context)=>HomePage(),
+  '/catalogo':(BuildContext context) => CatalogoScreen(), 
 
 },
 

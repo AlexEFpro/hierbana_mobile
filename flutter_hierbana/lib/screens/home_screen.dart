@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hierbana/components/bottom_nav.dart';
 
 
-class DesignBasicScreen extends StatelessWidget{
+
+class HomePage extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       appBar: AppBar(
+      appBar: AppBar(
         elevation: 0.0,
         leading: Builder(builder: (BuildContext context){
           return
@@ -17,7 +19,10 @@ class DesignBasicScreen extends StatelessWidget{
             );
         }) , 
         title: Text('Hierbana',
-        style: TextStyle(color: Colors.white),),
+        
+        style: TextStyle(color: Colors.white),)
+        ,
+        
         
          backgroundColor: Color(0xFF0B5345),
         
@@ -30,7 +35,9 @@ class DesignBasicScreen extends StatelessWidget{
               )],
            
       ),
-      body:Stack(
+      
+      body:
+      Stack(
         children: 
         [
           Image.asset("images/principal_mobile.png",
@@ -43,8 +50,12 @@ class DesignBasicScreen extends StatelessWidget{
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ElevatedButton(
-                onPressed: (){}, 
+                
+                onPressed: (){
+                  Navigator.pushNamed(context, '/catalogo');
+                }, 
                 child: Text("Catalogo"),
+                
                 ),
             ],
           ),
@@ -52,23 +63,7 @@ class DesignBasicScreen extends StatelessWidget{
        
          ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color(0xFF0B5345),
-        items: [
-          BottomNavigationBarItem(
-            icon: const Icon(Icons.people_alt_sharp),
-            activeIcon: const Icon(Icons.people_outline_sharp,color: Colors.white),
-            label: '',
-            backgroundColor: Colors.white,
-            ),
-            BottomNavigationBarItem(
-            icon: const Icon(Icons.email_outlined, color: Colors.white),
-            activeIcon: const Icon(Icons.email),
-            label: '',
-            
-            ),
-        ]
-      ),
+      bottomNavigationBar: BNavigator(),
     );
   }
 }
