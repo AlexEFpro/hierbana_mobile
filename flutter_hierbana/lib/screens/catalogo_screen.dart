@@ -53,8 +53,10 @@ class _CatalogoScreenState extends State<CatalogoScreen> {
            
       ),
       body:Stack(
+        
        children: [
         Row(
+          
           children: [
             Card(
       elevation: 20,
@@ -63,11 +65,6 @@ class _CatalogoScreenState extends State<CatalogoScreen> {
       
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
-
-        
-       
-        
-        
         
         children: [
           Column(
@@ -88,7 +85,8 @@ class _CatalogoScreenState extends State<CatalogoScreen> {
 
     )
           ],
-        )
+        ),
+    
        ],
       ),
       bottomNavigationBar: BNavigator(),
