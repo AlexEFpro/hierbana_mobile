@@ -1,4 +1,3 @@
-import 'dart:ffi';
 
 import 'package:mongo_dart/mongo_dart.dart';
 
@@ -8,7 +7,7 @@ class Producto{
   final  String category;
   final String presentation;
   final String description; 
-  final Int price;
+  final int price;
   final String src;
 
   const Producto ({required this.id, required this.category,required this.description, required this.price, required this.title,required this.presentation, required this.src });
